@@ -1,0 +1,198 @@
+{
+  "default": {
+    "restart_on_resolution_change": true,
+    "resolution_check_interval": 5
+  },
+  "users": {
+    "username": {
+      "restart_on_resolution_change": true
+    },
+    "emr.bkup": {
+      "resolution_check_interval": 3
+    },
+    "emrlive2.0": {
+      "resolution_check_interval": 3
+    },
+    "emr.lives": {
+      "resolution_check_interval": 3
+    },
+    "emr.spams": {
+      "resolution_check_interval": 3
+    },
+    "carawatsca": {
+      "resolution_check_interval": 3
+    },
+    "emilylouise620": {
+      "resolution_check_interval": 3
+    },
+    "teepounder01": {
+      "resolution_check_interval": 3
+    },
+    "ameliagilchrist.1": {
+      "resolution_check_interval": 3
+    },
+    "chloe_farquharx": {
+      "resolution_check_interval": 3
+    },
+    "miroslavapetrova26": {
+      "resolution_check_interval": 3
+    },
+    "xmakenzitiahwilliams": {
+      "resolution_check_interval": 3
+    },
+    "lilacoops.x": {
+      "resolution_check_interval": 3
+    },
+    "bel12468": {
+      "resolution_check_interval": 3
+    },
+    "bel365653": {
+      "resolution_check_interval": 3
+    },
+    "enija.28": {
+      "resolution_check_interval": 3
+    },
+    "user097452733": {
+      "resolution_check_interval": 3
+    },
+    "elliesprivatee2": {
+      "resolution_check_interval": 3
+    },
+    "annie.ellis.secret.x": {
+      "resolution_check_interval": 3
+    },
+    "andreeaionita_09": {
+      "resolution_check_interval": 3
+    },
+    "emmabelenantun": {
+      "resolution_check_interval": 3
+    },
+    "eml0ux": {
+      "resolution_check_interval": 3
+    },
+    "chimyinfinland": {
+      "resolution_check_interval": 5
+    },
+    "kakakitwill": {
+      "resolution_check_interval": 5
+    },
+    "pavelelenaandreea": {
+      "resolution_check_interval": 5
+    },
+    "the_viking_of_illusions": {
+      "resolution_check_interval": 5
+    },
+    "kirakira.daily": {
+      "resolution_check_interval": 5
+    },
+    "okisebi": {
+      "resolution_check_interval": 5
+    },
+    "davidcrossland4": {
+      "resolution_check_interval": 3
+    },
+    "_kinnkie": {
+      "resolution_check_interval": 5
+    },
+    "nam_doooo": {
+      "resolution_check_interval": 5
+    },
+    "angelaarletakarwi": {
+      "resolution_check_interval": 5
+    },
+    "sybau2392": {
+      "resolution_check_interval": 5
+    },
+    "myshakhanzadii": {
+      "resolution_check_interval": 5
+    },
+    "D": {
+      "resolution_check_interval": 5
+    },
+    "warripkin": {
+      "resolution_check_interval": 5
+    },
+    "yanzy0": {
+      "resolution_check_interval": 5
+    },
+    "qabshaxsade8": {
+      "resolution_check_interval": 5
+    },
+    "acaaaai_": {
+      "resolution_check_interval": 5
+    },
+    "bagsmart_live.ph": {
+      "resolution_check_interval": 5
+    },
+    "queezyyofficial": {
+      "resolution_check_interval": 5
+    },
+    "thisisrogue": {
+      "resolution_check_interval": 5
+    },
+    "motorolaprincess": {
+      "resolution_check_interval": 3
+    },
+    "jazminesophiad": {
+      "resolution_check_interval": 3
+    },
+    "tikky08052527": {
+      "resolution_check_interval": 3
+    },
+    "babyeeeee36": {
+      "resolution_check_interval": 3
+    },
+    "esther.makasi": {
+      "resolution_check_interval": 3
+    },
+    "tbein0316": {
+      "resolution_check_interval": 3
+    },
+    "kan_help": {
+      "resolution_check_interval": 3
+    },
+    "slum_g": {
+      "resolution_check_interval": 3
+    },
+    "naveed.rasheed882": {
+      "resolution_check_interval": 3
+    },
+    "user2713931356223": {
+      "resolution_check_interval": 3
+    },
+    "dfqqlqii39619": {
+      "resolution_check_interval": 3
+    },
+    "dydwhkq1hhc6": {
+      "resolution_check_interval": 3
+    },
+    "babymadeinmorocco": {
+      "resolution_check_interval": 3
+    },
+    "user2724722193835": {
+      "resolution_check_interval": 3
+    },
+    "salmariana9315": {
+      "resolution_check_interval": 3
+    },
+    "d_laurel": {
+      "resolution_check_interval": 3
+    },
+    "santowheels": {
+      "resolution_check_interval": 3
+    },
+    "user9296878709559": {
+      "resolution_check_interval": 3
+    },
+    "adam669063": {
+      "resolution_check_interval": 3
+    },
+    "y_love_food_": {
+      "resolution_check_interval": 3
+    },
+    "isaac3574": {
+      "resolution_check_interval": 3
+    }
+  },
+  "rooms": {}
+}
