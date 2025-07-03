@@ -2,6 +2,9 @@ import os
 import threading
 import time
 from typing import List, Tuple, Optional
+from http.client import HTTPException
+
+from requests import RequestException
 
 from core.tiktok_recorder import TikTokRecorder
 from utils.logger_manager import logger, LoggerManager
@@ -219,6 +222,23 @@ class MultiStreamRecorder:
                         return
                     time.sleep(1)
             
+            except ConnectionError as ex:
+                logger.warning(f"[{thread_name}] Connection lost during user check: {ex}")
+                logger.info(f"[{thread_name}] Retrying in 2 minutes...")
+                
+                # Wait for 2 minutes before retrying, but check stop_event
+                for _ in range(120):  # 2 minutes = 120 seconds
+                    if self.stop_event.is_set():
+                        return
+                    time.sleep(1)
+            
+            except (RequestException, HTTPException) as ex:
+                logger.warning(f"[{thread_name}] HTTP error during user check: {ex}")
+                logger.info(f"[{thread_name}] Retrying in 2 seconds...")
+                time.sleep(2)
+                if self.stop_event.is_set():
+                    return
+            
             except Exception as ex:
                 logger.error(f"[{thread_name}] Unexpected error: {ex}")
                 break
@@ -341,6 +361,35 @@ class MultiStreamRecorder:
                             stop_recording = True
                             break
                 
+                except ConnectionError:
+                    if not self.stop_event.is_set():
+                        logger.warning(f"[{thread_name}] Connection lost. Retrying in 2 minutes...")
+                        # Wait for 2 minutes before retrying, but check stop_event
+                        for _ in range(120):  # 2 minutes = 120 seconds
+                            if self.stop_event.is_set():
+                                stop_recording = True
+                                break
+                            time.sleep(1)
+                        if not self.stop_event.is_set():
+                            # Try to get a fresh live URL before continuing
+                            try:
+                                live_url = recorder.tiktok.get_live_url(recorder.room_id)
+                                if not live_url:
+                                    logger.error(f"[{thread_name}] Could not retrieve live URL after reconnection")
+                                    stop_recording = True
+                            except Exception as url_ex:
+                                logger.error(f"[{thread_name}] Error getting live URL: {url_ex}")
+                                stop_recording = True
+                    else:
+                        stop_recording = True
+
+                except (RequestException, HTTPException) as ex:
+                    if not self.stop_event.is_set():
+                        logger.warning(f"[{thread_name}] HTTP error: {ex}. Retrying in 2 seconds...")
+                        time.sleep(2)
+                    else:
+                        stop_recording = True
+
                 except Exception as ex:
                     logger.error(f"[{thread_name}] Recording error: {ex}")
                     stop_recording = True
